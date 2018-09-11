@@ -1,0 +1,15 @@
+#MAILCHECK=300
+HISTSIZE=30000
+SAVEHIST=30000
+setopt  APPEND_HISTORY
+setopt  HIST_IGNORE_ALL_DUPS
+setopt  HIST_IGNORE_SPACE
+setopt  HIST_REDUCE_BLANKS
+HISTFILE=~/.zsh/history
+DIRSTACKSIZE=20
+
+# Watch for my friends
+#watch=( $(<~/.friends) )       # watch for people in .friends file
+watch=(notme)                   # watch for everybody but me
+#LOGCHECK=300                    # check every 5 min for login/logout activity
+WATCHFMT='%n %a %l from %m at %t.'
