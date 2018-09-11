@@ -26,7 +26,7 @@ if cat /etc/*release | grep ^NAME | grep CentOS; then
     echo "==============================================="
     echo "Installing packages $packages on Debian"
     echo "==============================================="
-    apt-get install -y --force-yes $packages
+    apt-get install -y  $packages
  elif cat /etc/*release | grep ^NAME | grep Mint ; then
     echo "============================================="
     echo "Installing packages $packages on Mint"
@@ -41,10 +41,4 @@ if cat /etc/*release | grep ^NAME | grep CentOS; then
     echo "OS NOT DETECTED, couldn't install package $packages"
     exit 1;
  fi
-
-zsh_path=which zsh
-#copy shell settings to current system
-cp -Rvf ./user_config/ $HOME
-cp -Rvf ./root_config/ /root/
-usermod -s $zsh_path $USER
 exit 0
