@@ -6,6 +6,9 @@ usermod -s  /bin/zsh $user
 mv ./user_config/.zsh/ ~/
 mv ./user_config/.zshrc ~/
 
+LANGUAGE=ru_RU.UTF-8
+LANG=ru_RU.UTF-8
+LC_ALL=ru_RU.UTF-8
 export LANGUAGE=ru_RU.UTF-8
 export LANG=ru_RU.UTF-8
 export LC_ALL=ru_RU.UTF-8
