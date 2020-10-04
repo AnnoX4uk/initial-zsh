@@ -1,6 +1,6 @@
 #!/bin/bash
 
-packages="rsync zsh screen mc net-tools tcpdump traceroute"
+packages="rsync zsh screen mc net-tools tcpdump traceroute qemu-guest-agent"
 #check system
 if cat /etc/*release | grep ^NAME | grep CentOS; then
     echo "==============================================="
@@ -41,4 +41,5 @@ if cat /etc/*release | grep ^NAME | grep CentOS; then
     echo "OS NOT DETECTED, couldn't install package $packages"
     exit 1;
  fi
+./change_shell.sh
 exit 0
