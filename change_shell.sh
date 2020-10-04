@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ##For debian only
 
 user=`echo $USER`
@@ -6,13 +7,14 @@ usermod -s  /bin/zsh $user
 mv ./user_config/.zsh/ ~/
 mv ./user_config/.zshrc ~/
 
-LANGUAGE=ru_RU.UTF-8
-LANG=en_US.UTF-8
-LC_ALL=ru_RU.UTF-8
+
 export LANGUAGE=ru_RU.UTF-8
 export LANG=ru_RU.UTF-8
 export LC_ALL=ru_RU.UTF-8
 dpkg-reconfigure locales
+echo 'LC_ALL=ru_RU.UTF-8' >> /etc/environment
+echo 'LANG=ru_RU.UTF-8' >> /etc/environment
+
 
 systemctl enable qemu-guest-agent
 
