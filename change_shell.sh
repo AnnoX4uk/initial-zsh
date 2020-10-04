@@ -2,12 +2,12 @@
 
 ##For debian only
 
-user=`echo $USER`
+user="$USER"
 usermod -s  /bin/zsh $user
 mv ./user_config/.zsh/ ~/
 mv ./user_config/.zshrc ~/
 
-if $user==root; then
+if [ $user == "root" ]; then
     export LANGUAGE=ru_RU.UTF-8
     export LANG=ru_RU.UTF-8
     export LC_ALL=ru_RU.UTF-8
