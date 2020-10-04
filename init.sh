@@ -41,6 +41,6 @@ if cat /etc/*release | grep ^NAME | grep CentOS; then
     echo "OS NOT DETECTED, couldn't install package $packages"
     exit 1;
  fi
-systemctl enable chrony
+sudo systemctl enable chrony
 ./change_shell.sh
 exit 0
